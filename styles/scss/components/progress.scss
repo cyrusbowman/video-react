@@ -133,6 +133,24 @@
   visibility: hidden;
 }
 
+.video-react .video-react-progress-control .video-react-time-selection {
+  position: absolute;
+  height: 100%;
+  z-index: 1;
+
+  @extend .video-react-icon;
+  @extend .video-react-icon-circle;
+
+  // Time Selection handle
+  &:before {
+    position: absolute;
+    top: -0.433333333333333em;
+    right: -0.5em;
+    font-size: 1.5em;
+    color: #ff0000;
+  }
+}
+
 .video-react .video-react-progress-control .video-react-mouse-display {
   display: none;
   position: absolute;

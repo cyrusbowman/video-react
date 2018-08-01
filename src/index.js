@@ -13,6 +13,8 @@ import ControlBar from './components/control-bar/ControlBar';
 import PlayToggle from './components/control-bar/PlayToggle';
 import ForwardControl from './components/control-bar/ForwardControl';
 import ReplayControl from './components/control-bar/ReplayControl';
+import NextFrameControl from './components/control-bar/NextFrameControl';
+import PreviousFrameControl from './components/control-bar/PreviousFrameControl';
 import FullscreenToggle from './components/control-bar/FullscreenToggle';
 import ProgressControl from './components/control-bar/ProgressControl';
 import SeekBar from './components/control-bar/SeekBar';
@@ -45,6 +47,8 @@ export {
   PlayToggle,
   ForwardControl,
   ReplayControl,
+  NextFrameControl,
+  PreviousFrameControl,
   FullscreenToggle,
   ProgressControl,
   SeekBar,

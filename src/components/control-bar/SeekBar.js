@@ -6,6 +6,7 @@ import Slider from '../Slider';
 import PlayProgressBar from './PlayProgressBar';
 import LoadProgressBar from './LoadProgressBar';
 import MouseTimeDisplay from './MouseTimeDisplay';
+import TimeSelection from './TimeSelection';
 import { formatTime } from '../../utils';
 
 const propTypes = {
@@ -87,7 +88,7 @@ export default class SeekBar extends Component {
   }
 
   render() {
-    const { player: { currentTime, seekingTime, duration, buffered }, mouseTime } = this.props;
+    const { player: { currentTime, seekingTime, duration, buffered }, mouseTime, timeSelections } = this.props;
     const time = seekingTime || currentTime;
 
     return (
@@ -115,6 +116,11 @@ export default class SeekBar extends Component {
           duration={duration}
           mouseTime={mouseTime}
         />
+        {
+          (timeSelections || []).map(time => {
+            return <TimeSelection key={'TimeSelection'+time} time={time} duration={duration} />
+          })
+        }
         <PlayProgressBar
           currentTime={time}
           duration={duration}
